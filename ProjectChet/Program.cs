@@ -20,10 +20,7 @@ int[] RemoveZero (int[] sourceArray, int notZero)
     int[] resultArray = new int[notZero];
     for (int i = 0; i < notZero; i++)
     {
-        if (sourceArray[i] != 0)
-        {
-            resultArray[i] = sourceArray[i];
-        }
+       resultArray[i] = sourceArray[i];
     }
     return resultArray;
 }
