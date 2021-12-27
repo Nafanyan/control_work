@@ -6,6 +6,15 @@
     }
 }
 
+int[] RandomArray (int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = new Random().Next(0,101);
+    }
+    return array;
+}
+
 int[] RemoveZero (int[] sourceArray, int notZero)
 {
     int[] resultArray = new int[notZero];
@@ -19,9 +28,10 @@ int[] RemoveZero (int[] sourceArray, int notZero)
     return resultArray;
 }
 
-int[] inputArray = {1, 2, 4, 12, 7, 34, 0, 6};
+int[] inputArray = new int[10];
 int[] zeroInputArray = new int[inputArray.Length];
 int count = 0;
+inputArray = RandomArray(inputArray);
 PrintArray(inputArray);
 Console.Write(" => ");
 for (int i = 0; i < inputArray.Length; i++)
